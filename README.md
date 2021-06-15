@@ -15,6 +15,9 @@ Add this in your workflow:
     token: ${{ env.TURBINE_TOKEN }}
 ```
 
+When triggered, this step will run the `image_post_build` job with the version corresponding to the current git reference slugged, and the component corresponding to the current github repository name.
+
+All these default variables can be overridden, check the [Inputs](#inputs) section to see all the available parameters.
 
 ### Use case 2: Deploy your branch to a specific turbine environment
 
@@ -27,6 +30,10 @@ Add this in your workflow:
     token: ${{ env.TURBINE_TOKEN }}
     environment: adeo-myapp-prod  ## replace with your Turbine environment name
 ```
+
+When triggered, this step will run the `image_deploy` job with the version corresponding to the current git reference slugged, and the component corresponding to the current github repository name.
+
+All these default variables can be overridden, check the [Inputs](#inputs) section to see all the available parameters.
 
 
 ## Inputs
