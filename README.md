@@ -12,7 +12,7 @@ Add this in your workflow:
 - name: Turbine Deploy
   uses: adeo/turbine-deploy-action@main  ## Important: replace "main" branch with latest release commit hash
   with:
-    token: ${{ env.TURBINE_TOKEN }}
+    token: ${{ secrets.TURBINE_TOKEN }}
 ```
 
 When triggered, this step will run the `image_post_build` job with the version corresponding to the current git reference slugged, and the component corresponding to the current github repository name.
@@ -27,7 +27,7 @@ Add this in your workflow:
 - name: Turbine Deploy
   uses: adeo/turbine-deploy-action@main  ## Important: replace "main" branch with latest release commit hash
   with:
-    token: ${{ env.TURBINE_TOKEN }}
+    token: ${{ secrets.TURBINE_TOKEN }}
     environment: adeo-myapp-prod  ## replace with your Turbine environment name
 ```
 
