@@ -25,9 +25,6 @@ then
 fi
 
 
-COMPONENT_NAME=$(slugify $COMPONENT_NAME)
-
-
 if [[ -z "$TEAM_TOKEN" ]]
 then
 	echo "Missing turbine token parameter: token"
