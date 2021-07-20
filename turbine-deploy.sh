@@ -59,7 +59,8 @@ then
 	  "type": "image_post_build",
 	  "parameters": {
 	    "component": "'$COMPONENT_NAME'",
-	    "version": "'$VERSION_TO_DEPLOY'"
+	    "version": "'$VERSION_TO_DEPLOY'",
+	    "exclude_env_types": "'$TURBINE_EXCLUDE_ENV_TYPES'"
 	  },
 	  "state": "PENDING"
 	}' $TURBINE_JOBS_URL)

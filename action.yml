@@ -16,6 +16,10 @@ inputs:
   environment:
     description: 'the environment where to deploy this component version'
     required: false
+  exclude_env_types:
+    description: 'the environment types excluded by deploy'
+    required: false
+    default: 'prep,prod'
 
 runs:
   using: 'composite'
@@ -27,3 +31,4 @@ runs:
         TURBINE_VERSION: ${{ inputs.version }}
         TURBINE_COMPONENT: ${{ inputs.component }}
         TURBINE_ENVIRONMENT: ${{ inputs.environment }}
+        TURBINE_EXCLUDE_ENV_TYPES: ${{ inputs.exclude_env_types }}
